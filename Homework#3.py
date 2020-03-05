@@ -64,7 +64,7 @@ for i in range(int(TOTAL_SIZE*0.8)):
     print(IMGS[i].get_attribute('src'))
 
 os.chdir(TESTING_PATH)
-for i in range(int(TOTAL_SIZE*0.8),TOTAL_SIZE):
+for i in range(int(TOTAL_SIZE*0.2),TOTAL_SIZE):
     response = requests.get(IMGS[i].get_attribute('src'))
     img = Image.open(BytesIO(response.content))
     imgarr = np.asarray(img)
